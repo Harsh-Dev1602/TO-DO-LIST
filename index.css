@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+    padding: 10% 0px;
+}
+
+
+
+.box2 {
+    margin-top: 20px;
+    background: #41B3A2;
+    width: 95%;
+    height: auto;
+    border-radius: 35px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 0px;
+    box-shadow: 10px 10px 20px #ccc;
+}
+
+.binput input {
+    height: 45px;
+    width: 80%;
+    font-size: 25px;
+    padding: 30px 20px;
+    outline: none;
+    border: solid black 4px;
+    border-radius: 20px;
+    font-weight: 800;
+}
+
+
+.binput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+    gap: 20px;
+    width: 100%;
+    height: 40px;
+
+
+}
+
+.binput button {
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 100px;
+    font-weight: 800;
+    border: solid 4px black;
+    background: #BDE8CA;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.box2 button:hover {
+    background-color: lightblue;
+}
+
+
+#t1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    font-weight: 800;
+}
+
+span {
+    width: 90%;
+    display: flex;
+
+    justify-content: space-evenly;
+    border: white solid 2px;
+    align-items: center;
+    box-shadow: 1px 1px 5px #ccc;
+    border-radius: 15px;
+    margin: 15px 0px;
+}
+
+h2:hover{
+    cursor: pointer;
+
+}
+
+p {
+    display: flex;
+    width: 80%;
+    height: auto;
+    padding: 10px 30px;
+    align-items: center;
+    margin: 10px 1px;
+    cursor: default;
+
+}
+
+h2 {
+    
+    background-image: url(images.png);
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+    background-size: cover;
+    border-radius: 50%;
+    padding: 5px;
+
+
+}
+
+
+h2:hover{
+    background-color: #090f579c;
+    width: 26px;
+    height: 26px;
+}
+
+
+
+
+@media only screen and (max-width:700px) {
+    .binput input {
+        font-size: 15px;
+        width: 55%;
+        height: 45px;
+        padding: 2px 10px;
+
+    }
+
+    .box2 h1 {
+        font-size: 30px;
+    }
+
+    .binput button {
+        font-size: 15px;
+        padding: 2px 5px;
+    }
+
+    #t1 p {
+        font-size: 20px;
+    }
+}
