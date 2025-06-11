@@ -21,8 +21,15 @@ submitEle.addEventListener("click", () => {
     span.addEventListener("click", (e) => {
       if (e.target.tagName == "P") {
         p.style.textDecoration = "line-through";
-        p.style.backgroundColor = "#D7C3F1";
-        p.style.color = "black";
+        span.style.backgroundColor = "#d7c3f11f";
+        span.style.color = "black";
+        setItem();
+      }
+      else if (e.target.tagName == "SPAN") {
+        span.style.backgroundColor = "white";
+         p.style.textDecoration = "none";
+        
+
         setItem();
       }
       else if(e.target.tagName == "I"){
@@ -30,6 +37,7 @@ submitEle.addEventListener("click", () => {
             localStorage.clear()
       }
     });
+   
   }
 
   textEle.value = "";
