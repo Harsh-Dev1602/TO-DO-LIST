@@ -2,42 +2,134 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To - Do List</title>
-    <link rel="stylesheet" href="index.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskflow - Workspace</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
-    
-<body> 
 
-    <div class="box">
-        
-        <div class="box2">
-            <h1>To-Do List</h1>
-          <br>
-            <div class="binput">
-                <input type="text" id="text" placeholder=" Please enter a Task..">
-                <button id="submit" type="submit">Add Task</button>
-            </div>
-            <br>
- 
-            <div id="t1" class="select-none">
-                
-            </div>
-            
+<body>
 
+  <!-- Auth Screen -->
+  <section id="auth-screen" class="screen-active">
+    <div class="auth-card fade-in">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-check"></i>
         </div>
+        <h2>Welcome back</h2>
+        <p>Sign in to access your daily tasks</p>
+      </div>
+
+      <form id="login-form">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <div class="input-field">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" id="email" value="harshsuryavanshi@dev.in" required />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="input-field">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" value="HarshDev@0123456789" required />
+          </div>
+        </div>
+
+        <p id="auth-error" class="error-msg"></p>
+
+        <button type="submit" class="btn-primary">Sign In</button>
+      </form>
+      
+      <footer class="app-footer">
+        <p>Powered by <span class="brand-accent">Harsh Dev</span></p>
+      </footer>
     </div>
+  </section>
 
+  <!-- App Screen -->
+  <section id="app-screen" class="screen-hidden">
+    <div class="app-layout slide-up">
+      
+      <!-- Top Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="avatar">HS</div>
+          <div class="user-info">
+            <h3>Harsh Suryavanshi</h3>
+            <span class="user-email">harshsuryavanshi@dev.in</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="today-date" id="current-date">Today</span>
+          <button id="logout-btn" class="btn-icon" title="Logout">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          </button>
+        </div>
+      </header>
 
+      <!-- Task Stats Bar -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-label">Total Tasks</span>
+          <span id="stat-total" class="stat-value">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Completed</span>
+          <span id="stat-completed" class="stat-value text-success">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Pending</span>
+          <span id="stat-pending" class="stat-value text-warning">0</span>
+        </div>
+      </div>
 
+      <!-- Task Input Controls -->
+      <div class="task-input-card">
+        <div class="input-field main-input">
+          <i class="fa-solid fa-plus input-icon"></i>
+          <input type="text" id="text" placeholder="Add a new task..." />
+        </div>
+        <div class="input-options">
+          <select id="task-category">
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Dev">Dev</option>
+          </select>
+          <select id="task-priority">
+            <option value="Low">Low</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="High">High</option>
+          </select>
+          <button id="submit" type="button" class="btn-primary">Add Task</button>
+        </div>
+      </div>
 
+      <!-- Task List Area -->
+      <main class="task-section">
+        <div id="t1" class="task-list select-none">
+          <!-- Tasks injected via JavaScript -->
+        </div>
 
-    <script src="index.js"></script>
+        <div id="empty-state" class="empty-state">
+          <i class="fa-regular fa-calendar-check"></i>
+          <p>All caught up! No tasks pending.</p>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="app-footer">
+        <p>Powered by <span class="brand-accent">Harsh Dev</span></p>
+      </footer>
+
+    </div>
+  </section>
+
+  <script src="index.js"></script>
 </body>
 
 </html>
