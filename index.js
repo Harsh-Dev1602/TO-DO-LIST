@@ -2,13 +2,6 @@
 const VALID_EMAIL = "harshsuryavanshi@dev.in";
 const VALID_PASS = "HarshDev@0123456789";
 
-// Default Dataset
-const initialTasks = [
-  { id: 1, text: "Review pull requests for RO Helper platform", category: "Dev", priority: "High", completed: false },
-  { id: 2, text: "Design updated dashboard layout", category: "Work", priority: "Medium", completed: true },
-  { id: 3, text: "Configure SendGrid SMTP authentication", category: "Dev", priority: "High", completed: false },
-  { id: 4, text: "Update client documentation for Intelli Assess", category: "Work", priority: "Low", completed: false }
-];
 
 // Elements
 const authScreen = document.querySelector("#auth-screen");
